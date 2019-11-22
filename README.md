@@ -1,4 +1,4 @@
-# Adpot A Pet!
+# Adopt A Pet!
 
 VueJs app demo'in VueX & Vue Router :)
 
