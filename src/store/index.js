@@ -11,8 +11,14 @@ export default new Vuex.Store({
     dogs
   },
   mutations: {
+    appendPet: (state, { pet, species }) => {
+      state[species].push(pet)
+    }
   },
   actions: {
+    addPet: ({ commit }, payload) => {
+      commit('appendPet', payload)
+    }
   },
   modules: {
   }
