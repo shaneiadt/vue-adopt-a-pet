@@ -1,4 +1,6 @@
-# vue-adpot-pets
+# Adpot A Pet!
+
+VueJs app demo'in VueX & Vue Router :)
 
 ## Project setup
 ```
