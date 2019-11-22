@@ -8,7 +8,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     cats,
-    dogs
+    dogs,
+    pets: [...cats, ...dogs]
   },
   mutations: {
     appendPet: (state, { pet, species }) => {
@@ -19,6 +20,10 @@ export default new Vuex.Store({
     addPet: ({ commit }, payload) => {
       commit('appendPet', payload)
     }
+  },
+  getters: {
+    animalsCount: (state) => state.cats.length + state.dogs.length,
+    getAllCats: (state) => state.pets.filter(p => p.species === 'cat')
   },
   modules: {
   }
