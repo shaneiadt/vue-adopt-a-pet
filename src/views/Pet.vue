@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>Pet</h1>
-    {{ animal.name }}
+    <h1>{{ animal.name }} ({{ $route.params.species}})</h1>
+    <p>Age: {{ animal.age }}</p>
+    <p>Breed: {{ animal.breed }}</p>
   </div>
 </template>
 
@@ -21,8 +22,7 @@ export default {
     ])
   },
   mounted () {
-    const animal = this[this.$route.params.species][this.$route.params.id]
-    this.animal = animal
+    this.animal = this[this.$route.params.species][this.$route.params.id]
   }
 }
 </script>
